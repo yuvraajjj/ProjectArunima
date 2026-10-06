@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Arunima | Building Futures, Empowering Lives</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            pink: '#D81B60',
+                            dark: '#1e3a8a',
+                            light: '#fdf2f8',
+                            orange: '#f97316'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center">
+                <img src="https://i.ibb.co/6JJwdwWn/arunima-logo-1.png" alt="Project Arunima Logo" class="h-12 md:h-16">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center space-x-6 font-medium text-gray-700">
+                <a href="#" class="hover:text-brand-pink transition">Home</a>
+                <a href="#" class="hover:text-brand-pink transition">About Us</a>
+                <a href="#" class="hover:text-brand-pink transition">Services</a>
+                
+                <!-- Arukriti Dropdown -->
+                <div class="relative group">
+                    <button class="hover:text-brand-pink transition flex items-center py-4">
+                        Arukriti <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div class="absolute top-full left-0 mt-0 w-48 bg-white shadow-lg rounded-b-md opacity-0 group-hover:opacity-100 transition duration-200 invisible group-hover:visible z-50 border-t-2 border-brand-pink">
+                        <a href="#tiffin" class="block px-4 py-3 hover:bg-brand-light hover:text-brand-pink">Tiffin Service</a>
+                        <a href="#handicrafts" class="block px-4 py-3 hover:bg-brand-light hover:text-brand-pink">Handicrafts</a>
+                    </div>
+                </div>
+                
+                <a href="#" class="hover:text-brand-pink transition">Resources</a>
+                <a href="#" class="hover:text-brand-pink transition">Get Involved</a>
+            </nav>
+
+            <!-- Actions: Social & Donate -->
+            <div class="hidden md:flex items-center space-x-4">
+                <div class="flex space-x-3 text-gray-400">
+                    <a href="#" class="hover:text-brand-pink transition"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#" class="hover:text-brand-pink transition"><i class="fab fa-facebook text-lg"></i></a>
+                    <a href="#" class="hover:text-brand-pink transition"><i class="fab fa-youtube text-lg"></i></a>
+                </div>
+                <a href="#donate" class="bg-brand-pink text-white px-6 py-2.5 rounded-full font-bold shadow-md hover:bg-pink-700 transition flex items-center gap-2">
+                    <i class="fas fa-heart"></i> Donate
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-600 text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="hidden bg-white border-t border-gray-100 p-4 shadow-inner absolute w-full" id="mobile-menu">
+            <div class="flex flex-col space-y-3">
+                <a href="#" class="text-gray-700 font-medium">Home</a>
+                <a href="#" class="text-gray-700 font-medium">About Us</a>
+                <div class="border-l-4 border-brand-pink pl-3 py-1 my-1 flex flex-col space-y-2">
+                    <span class="text-sm text-gray-500 uppercase tracking-wide">Arukriti</span>
+                    <a href="#tiffin" class="text-brand-pink font-medium">Tiffin Service</a>
+                    <a href="#handicrafts" class="text-brand-pink font-medium">Handicrafts</a>
+                </div>
+                <a href="#" class="text-gray-700 font-medium">Get Involved</a>
+                <a href="#donate" class="bg-brand-pink text-white text-center py-2 rounded-lg font-bold mt-4">Donate Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-brand-light py-12 md:py-20 relative overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8 flex flex-col-reverse md:flex-row items-center gap-10">
+            <div class="md:w-1/2 space-y-6 z-10 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight">
+                    Building Futures, <br><span class="text-brand-pink">Empowering Lives</span>
+                </h1>
+                <p class="text-lg text-gray-600 leading-relaxed max-w-xl mx-auto md:mx-0">
+                    For more than a decade, Project Arunima has provided comprehensive residential and support programs to empower neurodiverse individuals. We build skills, foster purpose, and support every step toward an independent life.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <a href="#donate" class="bg-brand-pink text-white px-8 py-3.5 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition transform text-lg">Donate Now</a>
+                    <a href="#tiffin" class="bg-white border-2 border-brand-dark text-brand-dark px-8 py-3.5 rounded-full font-bold hover:bg-brand-dark hover:text-white transition shadow-md text-lg">Order Tiffin</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 rounded-2xl overflow-hidden shadow-2xl z-10 w-full">
+                <img src="https://i.ibb.co/KpZMfJ5H/home-page-bnr-min.png" alt="Friends of Arunima in Tiffin Uniforms" class="w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Bar -->
+    <section class="bg-brand-dark text-white py-10 relative z-20">
+        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-x divide-blue-400/30">
+            <div class="p-2">
+                <h3 class="text-3xl lg:text-4xl font-bold text-brand-orange">10+</h3>
+                <p class="text-sm uppercase tracking-wider mt-2 opacity-90 font-medium">Years of Impact</p>
+            </div>
+            <div class="p-2">
+                <h3 class="text-3xl lg:text-4xl font-bold text-brand-orange">45+</h3>
+                <p class="text-sm uppercase tracking-wider mt-2 opacity-90 font-medium">Friends Supported</p>
+            </div>
+            <div class="p-2">
+                <h3 class="text-3xl lg:text-4xl font-bold text-brand-orange">1,200</h3>
+                <p class="text-sm uppercase tracking-wider mt-2 opacity-90 font-medium">Tiffins per Month</p>
+            </div>
+            <div class="p-2">
+                <h3 class="text-3xl lg:text-4xl font-bold text-brand-orange">500+</h3>
+                <p class="text-sm uppercase tracking-wider mt-2 opacity-90 font-medium">Handicrafts Sold</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arukriti Section -->
+    <section id="arukriti" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-pink font-bold tracking-wider uppercase text-sm mb-2 block">Our Initiatives</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Arukriti <span class="font-normal text-gray-500">by Arunima</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Our in-house vocational initiatives where our Friends and local artisans create value, earn income, and build confidence.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                <!-- Tiffin Service Card -->
+                <div id="tiffin" class="bg-gray-50 rounded-2xl overflow-hidden shadow-xl border border-gray-100 flex flex-col hover:shadow-2xl transition duration-300">
+                    <div class="relative h-64">
+                        <img src="https://i.ibb.co/KpZMfJ5H/home-page-bnr-min.png" alt="Arukriti Tiffin Team" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-brand-orange font-bold px-3 py-1 rounded-full text-sm shadow">Freshly Made</div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 flex items-center gap-2"><i class="fas fa-box-open text-brand-orange"></i> The Tiffin Experience</h3>
+                            <p class="text-gray-600 leading-relaxed">Fresh, hygienic, and wholesome meals prepared daily by our neurodiverse team. Taste the dedication in every bite while supporting our community.</p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-200">
+                            <a href="#" class="flex-1 bg-red-500 text-white text-center py-3 rounded-xl font-bold hover:bg-red-600 transition flex items-center justify-center gap-2 shadow-sm">
+                                <i class="fas fa-motorcycle"></i> Order on Zomato
+                            </a>
+                            <a href="#" class="flex-1 bg-green-500 text-white text-center py-3 rounded-xl font-bold hover:bg-green-600 transition flex items-center justify-center gap-2 shadow-sm">
+                                <i class="fab fa-whatsapp text-xl"></i> WhatsApp Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Handicrafts Card -->
+                <div id="handicrafts" class="bg-gray-50 rounded-2xl overflow-hidden shadow-xl border border-gray-100 flex flex-col hover:shadow-2xl transition duration-300">
+                    <div class="relative h-64">
+                        <img src="https://i.ibb.co/zhg3PXmC/about-us-friends.jpg" alt="Friends painting handicrafts" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-brand-dark font-bold px-3 py-1 rounded-full text-sm shadow">Handmade</div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between space-y-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-3 flex items-center gap-2"><i class="fas fa-paint-brush text-brand-dark"></i> Handcrafted with Joy</h3>
+                            <p class="text-gray-600 leading-relaxed">Unique home decor, bags, and art pieces crafted meticulously by our Friends and local community artisans. Each piece tells a story of empowerment.</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <a href="#" class="w-full bg-brand-dark text-white text-center py-3 rounded-xl font-bold hover:bg-blue-900 transition flex items-center justify-center gap-2 shadow-sm">
+                                <i class="fas fa-shopping-bag"></i> Shop Handicrafts
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fundraiser / Support Us Section -->
+    <section id="donate" class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4 lg:px-8 max-w-5xl">
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-t-8 border-brand-pink">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Support Our Journey</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Your generous contributions directly fund skill training, residential care, and vocational independence for our Friends.</p>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="mb-10 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                    <div class="flex flex-col sm:flex-row justify-between text-sm md:text-base font-bold text-gray-800 mb-3 gap-2">
+                        <span>Current Campaign: New Training Center</span>
+                        <span class="text-brand-pink">₹2,50,000 <span class="text-gray-500 font-normal">raised of ₹5L</span></span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-5 overflow-hidden">
+                        <div class="bg-gradient-to-r from-brand-orange to-brand-pink h-5 rounded-full transition-all duration-1000 relative" style="width: 50%">
+                            <div class="absolute inset-0 bg-white/20 w-full animate-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Tiers -->
+                <div class="grid sm:grid-cols-3 gap-6 mb-10">
+                    <div class="border border-gray-200 hover:border-brand-pink transition rounded-xl p-6 bg-white text-center shadow-sm">
+                        <div class="w-12 h-12 bg-pink-50 text-brand-pink rounded-full flex items-center justify-center text-xl mx-auto mb-3"><i class="fas fa-palette"></i></div>
+                        <h4 class="font-bold text-2xl text-gray-900">₹ 500</h4>
+                        <p class="text-sm text-gray-500 mt-2">Funds 1 week of art and craft supplies.</p>
+                    </div>
+                    <div class="border-2 border-brand-dark rounded-xl p-6 bg-white text-center shadow-md relative transform sm:-translate-y-2">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-dark text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</div>
+                        <div class="w-12 h-12 bg-blue-50 text-brand-dark rounded-full flex items-center justify-center text-xl mx-auto mb-3 mt-1"><i class="fas fa-book-reader"></i></div>
+                        <h4 class="font-bold text-2xl text-gray-900">₹ 2,000</h4>
+                        <p class="text-sm text-gray-500 mt-2">Provides 1 month of vocational training.</p>
+                    </div>
+                    <div class="border border-gray-200 hover:border-brand-pink transition rounded-xl p-6 bg-white text-center shadow-sm">
+                        <div class="w-12 h-12 bg-green-50 text-green-600 rounded-full flex items-center justify-center text-xl mx-auto mb-3"><i class="fas fa-home"></i></div>
+                        <h4 class="font-bold text-2xl text-gray-900">₹ 5,000</h4>
+                        <p class="text-sm text-gray-500 mt-2">Sponsors comprehensive monthly care.</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="inline-block bg-brand-pink text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg shadow-brand-pink/30 hover:bg-pink-700 hover:-translate-y-1 transition transform">Make a Secure Donation</a>
+                    <p class="text-sm text-gray-500 mt-5 flex items-center justify-center gap-2 bg-green-50 text-green-700 py-2 px-4 rounded-lg inline-flex mx-auto">
+                        <i class="fas fa-shield-alt"></i> All donations are tax-exempt under Section 80G. (Reg: XXXXXXX)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Family / Stories -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-orange font-bold tracking-wider uppercase text-sm mb-2 block">Community</span>
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">The Arunima Family</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Every smile at Arunima starts with a caring trainer. We are a community built on love, patience, and professional support.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://i.ibb.co/WNmw9kjW/555x312-slider3.png" alt="Our Dedicated Staff and Trainees" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-8">
+                    <!-- Director Profile -->
+                    <div class="flex items-start gap-5 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+                        <img src="https://i.ibb.co/h1CbWGwQ/aparna.jpg" alt="Aparna Das - Director" class="w-24 h-24 rounded-full object-cover shadow-md border-4 border-white flex-shrink-0">
+                        <div>
+                            <h4 class="font-bold text-xl text-gray-900">Aparna Das</h4>
+                            <p class="text-sm text-brand-pink font-bold uppercase tracking-wider mb-2">Director & Founder</p>
+                            <p class="text-gray-600 text-base italic leading-relaxed">"We've built something beautiful over the last decade. It's not just a residence; it's a place where our Friends find true belonging and dignity."</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Testimonial -->
+                    <div class="bg-brand-light p-6 rounded-2xl border-l-4 border-brand-orange shadow-sm">
+                        <div class="text-brand-orange text-2xl mb-2"><i class="fas fa-quote-left"></i></div>
+                        <p class="text-gray-700 text-base italic leading-relaxed mb-4">"Ordering from Arukriti Tiffin has been wonderful. Not only does the food feel like home, but knowing it supports such a noble cause makes every meal special. The dedication of the team is truly inspiring."</p>
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center text-gray-500 font-bold"><i class="fas fa-user"></i></div>
+                            <div>
+                                <p class="font-bold text-sm text-gray-900">Rahul M.</p>
+                                <p class="text-xs text-gray-500 uppercase tracking-wider">Regular Customer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compact Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16 mt-auto">
+        <div class="container mx-auto px-4 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Contact -->
+            <div class="space-y-4">
+                <div class="bg-white inline-block p-2 rounded-lg mb-2">
+                    <img src="https://i.ibb.co/6JJwdwWn/arunima-logo-1.png" alt="Arunima Logo" class="h-10">
+                </div>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Kamboj Plotting, Chalang, Nagal Hatnala,<br>
+                    Sahastradhara Road, Dehradun - 248013
+                </p>
+                <div class="space-y-2 mt-4">
+                    <p class="text-sm hover:text-white transition cursor-pointer flex items-center gap-2"><i class="fas fa-phone text-brand-pink"></i> +91-8859046829</p>
+                    <p class="text-sm hover:text-white transition cursor-pointer flex items-center gap-2"><i class="fas fa-envelope text-brand-pink"></i> info@projectarunima.org</p>
+                </div>
+                <div class="inline-block px-3 py-1 bg-gray-800 rounded text-xs text-gray-400 mt-2 border border-gray-700">
+                    Registered Trust • 80G / 12A Certified
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-lg mb-4 relative inline-block">
+                    Quick Links
+                    <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-brand-pink -mb-2"></span>
+                </h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-brand-pink transition flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> About Us</a></li>
+                    <li><a href="#" class="hover:text-brand-pink transition flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> Our Programs</a></li>
+                    <li><a href="#arukriti" class="hover:text-brand-pink transition flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> Arukriti Initiatives</a></li>
+                    <li><a href="#" class="hover:text-brand-pink transition flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> Join the Team (Jobs)</a></li>
+                    <li><a href="#" class="hover:text-brand-pink transition flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> Annual Reports</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter & Social -->
+            <div class="space-y-4">
+                <h4 class="text-white font-bold text-lg mb-4 relative inline-block">
+                    Stay Updated
+                    <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-brand-dark -mb-2"></span>
+                </h4>
+                <p class="text-sm mb-3 text-gray-400">Join our newsletter to hear our latest stories.</p>
+                <form class="flex flex-col sm:flex-row gap-2">
+                    <input type="email" placeholder="Your email address" class="w-full px-4 py-2.5 rounded-lg bg-gray-800 border border-gray-700 text-white text-sm focus:outline-none focus:ring-2 focus:ring-brand-pink focus:border-transparent">
+                    <button type="button" class="bg-brand-pink hover:bg-pink-700 text-white px-5 py-2.5 rounded-lg text-sm font-bold transition whitespace-nowrap">Subscribe</button>
+                </form>
+                
+                <div class="pt-4 flex space-x-3">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-brand-pink hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-brand-dark hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-red-600 hover:text-white transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-4 lg:px-8 mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <p>&copy; 2026 Project Arunima. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition">Terms & Conditions</a>
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Return Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918859046829" target="_blank" title="Chat with us on WhatsApp" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-transform duration-300 z-50 flex items-center justify-center">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
