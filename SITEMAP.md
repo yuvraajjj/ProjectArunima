@@ -1,0 +1,37 @@
+# Project Arunima prototype sitemap
+
+- Home — `index.html`
+- About Us — `about.html`
+  - Who We Are — `who-we-are.html`
+  - Inclusivity — `inclusivity.html`
+  - Project Brochure — `brochure.html`
+  - Vision and Mission — `vision-mission.html`
+  - Trust and Advisory Board — `board.html`
+  - News and Newsletters — `news.html`
+  - Legal and Tax Certification — `certifications.html`
+  - Meet the Family — `meet-the-family.html`
+  - Meet the Team — `meet-the-team.html`
+  - FAQ — `faq.html`
+  - Videos — `videos.html`
+- Services — `services.html`
+  - Residence and Training — `residence-training.html`
+  - University Seminars — `university-seminars.html`
+- Arukriti — `arukriti.html`
+  - Tiffin Service — `tiffin-service.html`
+  - Handicrafts — `handicrafts.html`
+- Resources for Families — `resources.html`
+  - Annual Reports — `annual-reports.html`
+  - Policy Manual — `policy-manual.html`
+  - Application Form — `application-form.html`
+  - Packing List — `packing-list.html`
+  - Safety — `safety.html`
+- Get Involved — `get-involved.html`
+  - Admissions — `admissions.html`
+  - Donate — `donate.html`
+  - Jobs — `jobs.html`
+  - Partners — `partners.html`
+  - Volunteer — `volunteer.html`
+- Support Us — `support-us.html`
+  - Donors — `donors.html`
+- Contact — `contact.html`
+- Website Notices — `legal-policies.html`
